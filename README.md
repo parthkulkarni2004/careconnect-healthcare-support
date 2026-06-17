@@ -1,96 +1,55 @@
-CareConnect – Healthcare Support & Volunteer Assistance Platform
-Overview
+# CareConnect – Healthcare Support Platform
 
-CareConnect is a responsive healthcare support platform designed to connect individuals seeking assistance with community volunteers. The application provides a simple and accessible way for patients to submit support requests, volunteers to register their availability, and users to receive instant guidance through an automated FAQ Assistant.
+## Project Overview
 
-This project demonstrates how technology can be used to streamline healthcare support services and improve community engagement through a user-friendly web interface.
+CareConnect is a simple healthcare support web application that allows patients to request assistance and volunteers to register their support. The platform also includes an FAQ Assistant that provides instant responses to common questions.
 
-Features
-Patient Support Request
-Submit healthcare-related assistance requests.
-Choose from multiple support categories.
-Form validation for accurate data collection.
-Data persistence using Local Storage.
-Volunteer Registration
-Register as a volunteer.
-Specify skills and availability.
-Store volunteer information locally.
-Responsive and user-friendly registration process.
-FAQ Assistant (AI / Automation Feature)
-Interactive chatbot interface.
-Automatically responds to frequently asked questions.
-Provides instant guidance regarding support services and volunteering.
-Demonstrates automation through keyword-based response handling.
-Responsive Design
-Mobile-friendly layout.
-Consistent user experience across devices.
-Modern healthcare-themed interface.
-Technology Stack
-HTML5
-CSS3
-JavaScript (ES6)
-Browser Local Storage
-Git & GitHub
-Vercel Deployment
-AI / Automation Feature
+## Features
 
-The platform includes an FAQ Assistant that acts as an AI-inspired support system.
+* Patient Support Request Form
+* Volunteer Registration Form
+* FAQ Assistant (AI/Automation Feature)
+* Form Validation
+* Local Storage Data Persistence
+* Responsive Design
 
-The assistant automatically identifies keywords in user questions and returns predefined responses related to:
+## Technology Stack
 
-Volunteer registration
-Healthcare support services
-Blood donation assistance
-Registration process
-General platform information
+* HTML5
+* CSS3
+* JavaScript
+* Local Storage
+* Vercel
 
-This feature improves user experience by providing instant assistance without requiring manual intervention.
+## AI / Automation Feature
 
-NGO Use Case
+The FAQ Assistant automatically responds to common healthcare and volunteer-related questions using keyword-based matching.
 
-CareConnect is designed as a prototype for healthcare-focused NGOs and community support organizations.
+## NGO Use Case
 
-Potential use cases include:
+This platform can help NGOs collect support requests, manage volunteer registrations, and provide quick information to users through an automated assistant.
 
-Managing healthcare assistance requests
-Recruiting and organizing volunteers
-Providing quick information to beneficiaries
-Improving accessibility to support services
-Reducing response time for common inquiries
-Project Structure
+## Project Structure
+
 careconnect/
-│
-├── index.html
-├── support.html
-├── volunteer.html
-├── chatbot.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   ├── support.js
-│   ├── volunteer.js
-│   └── chatbot.js
-Local Storage Implementation
 
-The application uses browser Local Storage to persist data without requiring a backend database.
+* index.html
+* support.html
+* volunteer.html
+* chatbot.html
+* css/style.css
+* js/support.js
+* js/volunteer.js
+* js/chatbot.js
 
-Stored Data:
+## Live Demo
 
-Patient Requests
-Name
-Age
-Email
-Phone Number
-Support Type
-Description
-Volunteer Registrations
-Name
-Email
-Phone Number
-Skills
-Availability
-Motivation
+Add your Vercel link here.
 
-This approach keeps the project lightweight while demonstrating client-side data management.
+## GitHub Repository
+
+Add your GitHub repository link here.
+
+## Author
+
+Parth Kulkarni
