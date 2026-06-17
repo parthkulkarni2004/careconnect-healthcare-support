@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Volunteer - CareConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">♥</span>
+                <span>CareConnect</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Get Support</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="chatbot.html">FAQ Assistant</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark Mode">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Become a Volunteer</h1>
+            <p>Join our community of dedicated volunteers and make a real difference in people's lives</p>
+        </div>
+    </section>
+
+    <!-- Volunteer Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <!-- Benefits Card -->
+                <div class="benefits-card">
+                    <h3>Why Volunteer With Us?</h3>
+                    <ul class="benefits-list">
+                        <li>✓ Make a real impact in your community</li>
+                        <li>✓ Flexible volunteering schedules</li>
+                        <li>✓ Work with like-minded individuals</li>
+                        <li>✓ Develop new skills and experience</li>
+                        <li>✓ Certificate of appreciation</li>
+                        <li>✓ Part of a growing healthcare network</li>
+                    </ul>
+                </div>
+
+                <form id="volunteerForm" class="form">
+                    <div class="form-group">
+                        <label for="volunteerName">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="volunteerName" 
+                            name="volunteerName" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                        <span class="error-message" id="volunteerNameError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="volunteerEmail">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="volunteerEmail" 
+                                name="volunteerEmail" 
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                            <span class="error-message" id="volunteerEmailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="volunteerPhone">Phone Number *</label>
+                            <input 
+                                type="tel" 
+                                id="volunteerPhone" 
+                                name="volunteerPhone" 
+                                placeholder="+91-XXXXXXXXXX"
+                                pattern="[0-9\-\+\(\)\s]+"
+                                required
+                            >
+                            <span class="error-message" id="volunteerPhoneError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skill">Area of Expertise *</label>
+                        <select id="skill" name="skill" required>
+                            <option value="">-- Select Your Skill --</option>
+                            <option value="Counseling">Counseling</option>
+                            <option value="Healthcare Assistance">Healthcare Assistance</option>
+                            <option value="Blood Donation Support">Blood Donation Support</option>
+                            <option value="Fundraising">Fundraising</option>
+                            <option value="Community Outreach">Community Outreach</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="error-message" id="skillError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="availability">Your Availability *</label>
+                        <select id="availability" name="availability" required>
+                            <option value="">-- Select Availability --</option>
+                            <option value="Weekdays">Weekdays</option>
+                            <option value="Weekends">Weekends</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
+                        <span class="error-message" id="availabilityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Tell Us About Your Motivation *</label>
+                        <textarea 
+                            id="motivation" 
+                            name="motivation" 
+                            placeholder="Why do you want to volunteer with CareConnect? What drives you to help others?"
+                            rows="5"
+                            required
+                        ></textarea>
+                        <span class="error-message" id="motivationError"></span>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span>I agree to the terms and conditions and understand the volunteer commitment</span>
+                        </label>
+                        <span class="error-message" id="termsError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Register as Volunteer</button>
+                    <button type="reset" class="btn btn-outline btn-full">Clear Form</button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="volunteerSuccess" class="success-box hidden">
+                    <div class="success-icon">✓</div>
+                    <h3>Welcome to CareConnect!</h3>
+                    <p>Thank you for registering as a volunteer. Your application has been submitted successfully.</p>
+                    <p>Our team will review your information and contact you within 2-3 business days to discuss next steps and onboarding.</p>
+                    <p class="volunteer-id">Volunteer ID: <strong id="volunteerId"></strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsibilities Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2>Volunteer Responsibilities</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Listen & Understand</h3>
+                    <p>Understand patient needs with empathy and compassion.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Provide Support</h3>
+                    <p>Offer assistance based on your skills and availability.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Follow Up</h3>
+                    <p>Maintain communication and ensure patient satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-preview">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-items">
+                <details class="faq-item">
+                    <summary>Can I register as a volunteer without prior experience?</summary>
+                    <p>Yes! We welcome passionate individuals from all backgrounds. While prior experience is helpful, what matters most is your willingness to learn and help others.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is volunteering time-bound?</summary>
+                    <p>No, you decide your own schedule. We offer flexibility with weekday, weekend, or flexible availability options.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What training will I receive?</summary>
+                    <p>We provide comprehensive orientation and training specific to your volunteer role before you start assisting patients.</p>
+                </details>
+            </div>
+            <p class="faq-link">More questions? <a href="chatbot.html">Visit our FAQ Assistant</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CareConnect</h4>
+                    <p>Connecting healthcare support with community care.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="support.html">Request Support</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="chatbot.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@careconnect.org</p>
+                    <p>Phone: +91-XXXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CareConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/volunteer.js"></script>
+</body>
+</html>

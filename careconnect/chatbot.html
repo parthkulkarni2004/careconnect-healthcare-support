@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Assistant - CareConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">♥</span>
+                <span>CareConnect</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Get Support</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="chatbot.html">FAQ Assistant</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark Mode">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>FAQ Assistant</h1>
+            <p>Get instant answers to your questions about CareConnect</p>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section">
+        <div class="container">
+            <div class="chatbot-container">
+                <!-- Chat History -->
+                <div class="chat-history" id="chatHistory">
+                    <div class="bot-message">
+                        <div class="message-content">
+                            <p>👋 Hello! I'm the CareConnect Assistant. I'm here to help answer your questions about our services, volunteer opportunities, and how we can support you.</p>
+                            <p>You can ask me about:</p>
+                            <ul class="quick-questions">
+                                <li>• How to volunteer</li>
+                                <li>• Available support services</li>
+                                <li>• Registration process</li>
+                                <li>• How to request assistance</li>
+                                <li>• Support timelines</li>
+                                <li>• Blood donation information</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-area">
+                    <form id="chatForm" class="chat-form">
+                        <input 
+                            type="text" 
+                            id="userInput" 
+                            placeholder="Ask me anything..." 
+                            autocomplete="off"
+                            aria-label="Chat input"
+                        >
+                        <button type="submit" class="send-btn" aria-label="Send message">
+                            <span>Send</span>
+                            <span class="send-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Clear Chat Button -->
+                <button id="clearChat" class="btn-clear-chat">Clear Conversation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Questions Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2>Popular Questions</h2>
+            <div class="popular-questions">
+                <div class="question-card">
+                    <h3>How can I volunteer?</h3>
+                    <p>Visit our Volunteer page and fill out the registration form with your details and area of expertise.</p>
+                </div>
+                <div class="question-card">
+                    <h3>What support services are available?</h3>
+                    <p>We provide medical assistance, blood donation support, counseling, medicine support, and emergency assistance.</p>
+                </div>
+                <div class="question-card">
+                    <h3>Is registration free?</h3>
+                    <p>Yes! All registration and services on CareConnect are completely free for both patients and volunteers.</p>
+                </div>
+                <div class="question-card">
+                    <h3>How do I request assistance?</h3>
+                    <p>Go to the "Request Support" page, fill out the form with your details and healthcare needs, and submit. Our team will review and connect you with a volunteer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CareConnect</h4>
+                    <p>Connecting healthcare support with community care.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="support.html">Request Support</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="chatbot.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@careconnect.org</p>
+                    <p>Phone: +91-XXXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CareConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

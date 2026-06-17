@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Healthcare Support - CareConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">♥</span>
+                <span>CareConnect</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Get Support</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="chatbot.html">FAQ Assistant</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark Mode">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Request Healthcare Support</h1>
+            <p>Tell us about your healthcare needs and we'll connect you with the right volunteer</p>
+        </div>
+    </section>
+
+    <!-- Support Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <form id="supportForm" class="form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input 
+                                type="number" 
+                                id="age" 
+                                name="age" 
+                                placeholder="Enter your age"
+                                min="1"
+                                max="120"
+                                required
+                            >
+                            <span class="error-message" id="ageError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+91-XXXXXXXXXX"
+                            pattern="[0-9\-\+\(\)\s]+"
+                            required
+                        >
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="supportType">Type of Support Needed *</label>
+                        <select id="supportType" name="supportType" required>
+                            <option value="">-- Select Support Type --</option>
+                            <option value="Medical Assistance">Medical Assistance</option>
+                            <option value="Blood Donation">Blood Donation</option>
+                            <option value="Counseling">Counseling</option>
+                            <option value="Medicine Support">Medicine Support</option>
+                            <option value="Emergency Support">Emergency Support</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="error-message" id="supportTypeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Describe Your Healthcare Need *</label>
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            placeholder="Please provide details about your healthcare needs..."
+                            rows="5"
+                            required
+                        ></textarea>
+                        <span class="error-message" id="descriptionError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Submit Support Request</button>
+                    <button type="reset" class="btn btn-outline btn-full">Clear Form</button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-box hidden">
+                    <div class="success-icon">✓</div>
+                    <h3>Request Submitted Successfully!</h3>
+                    <p>Your healthcare support request has been recorded. Our volunteer team will review your request and contact you soon.</p>
+                    <p class="request-id">Request ID: <strong id="requestId"></strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Requests Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Submit Request</h3>
+                    <p>Fill out the form with your healthcare needs and personal information.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>We Review</h3>
+                    <p>Our team reviews your request and matches it with suitable volunteers.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Get Connected</h3>
+                    <p>A volunteer will contact you within 24-48 hours to provide assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CareConnect</h4>
+                    <p>Connecting healthcare support with community care.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="support.html">Request Support</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="chatbot.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@careconnect.org</p>
+                    <p>Phone: +91-XXXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CareConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/support.js"></script>
+</body>
+</html>

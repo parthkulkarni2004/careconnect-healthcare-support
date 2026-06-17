@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CareConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">♥</span>
+                <span>CareConnect</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Get Support</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="chatbot.html">FAQ Assistant</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark Mode">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+            <p>Manage all support requests and volunteer registrations</p>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard Section -->
+    <section class="admin-section">
+        <div class="container">
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalRequests">0</div>
+                    <div class="stat-label">Support Requests</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalVolunteers">0</div>
+                    <div class="stat-label">Volunteer Registrations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalEntries">0</div>
+                    <div class="stat-label">Total Entries</div>
+                </div>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="admin-tabs">
+                <button class="tab-button active" data-tab="requests">📋 Support Requests</button>
+                <button class="tab-button" data-tab="volunteers">👥 Volunteers</button>
+            </div>
+
+            <!-- Support Requests Tab -->
+            <div id="requests-tab" class="tab-content active">
+                <div class="tab-header">
+                    <h2>Support Requests</h2>
+                    <div class="tab-controls">
+                        <input 
+                            type="text" 
+                            id="requestsSearch" 
+                            placeholder="Search by name or email..."
+                            class="search-input"
+                        >
+                        <button id="exportRequests" class="btn btn-primary">📥 Export as CSV</button>
+                        <button id="clearRequests" class="btn btn-danger">🗑️ Clear All</button>
+                    </div>
+                </div>
+
+                <div id="requestsContainer" class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Support Type</th>
+                                <th>Description</th>
+                                <th>Submitted</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="requestsTable">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div id="requestsEmpty" class="empty-state">
+                        <p>No support requests yet</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteers Tab -->
+            <div id="volunteers-tab" class="tab-content">
+                <div class="tab-header">
+                    <h2>Volunteer Registrations</h2>
+                    <div class="tab-controls">
+                        <input 
+                            type="text" 
+                            id="volunteersSearch" 
+                            placeholder="Search by name or skill..."
+                            class="search-input"
+                        >
+                        <button id="exportVolunteers" class="btn btn-primary">📥 Export as CSV</button>
+                        <button id="clearVolunteers" class="btn btn-danger">🗑️ Clear All</button>
+                    </div>
+                </div>
+
+                <div id="volunteersContainer" class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Skill</th>
+                                <th>Availability</th>
+                                <th>Motivation</th>
+                                <th>Registered</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="volunteersTable">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                    <div id="volunteersEmpty" class="empty-state">
+                        <p>No volunteer registrations yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CareConnect</h4>
+                    <p>Connecting healthcare support with community care.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="support.html">Request Support</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="chatbot.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@careconnect.org</p>
+                    <p>Phone: +91-XXXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CareConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
