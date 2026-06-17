@@ -44,11 +44,7 @@ careconnect/
 
 ## Live Demo
 
-Add your Vercel link here.
-
-## GitHub Repository
-
-Add your GitHub repository link here.
+https://careconnect-healthcare-support.vercel.app/
 
 ## Author
 
